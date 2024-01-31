@@ -1,8 +1,11 @@
 import java.awt.*;
 public class Ball {
+    private int x;
+    private int y;
     private int size;
     private Color color;
-    private int speed;
+    private int speedx;
+    private int speedy;
     private int xx = (int)(Math.random()*480)+1;
     private int yy = (int)(Math.random()*480)+1;
     private int r = (int)(Math.random()*255)+1;
@@ -12,11 +15,12 @@ public class Ball {
     private int sp = (int)(Math.random()*20)+1;
 
     public Ball(int x, int y){
-        x = xx;
-        y = yy;
+        this.x = xx;
+        this.y = yy;
         size = s;
         color = new Color(r,g,b);
-        speed = sp;
+        speedx = sp;
+        speedy = sp;
     }
 
     public void draw(Graphics g2){
@@ -25,10 +29,14 @@ public class Ball {
     }
 
     public void move(){
-        xx += speed;
-        yy += speed;
-        if(xx>=480||xx<=0||yy>=480||xx<=0){
-            speed=speed*-1;
+        xx += speedx;
+        yy += speedy;
+        if(xx>=480||xx<=0){
+            speedx=speedx*-1;
+
+        }
+        if(yy>=480||yy<=0){
+            speedy=speedy*-1;
 
         }
 
