@@ -7,7 +7,8 @@ public class Main {
 
         MyPanel panel = new MyPanel();
 
-        frame.setSize(500,500);
+
+        //frame.setSize(500,500);
         //panel.setBackground(Color.RED);
 
         frame.add(panel);

@@ -33,11 +33,9 @@ public class Ball {
         yy += speedy;
         if(xx>=480||xx<=0){
             speedx=speedx*-1;
-
         }
         if(yy>=480||yy<=0){
             speedy=speedy*-1;
-
         }
 
     }
