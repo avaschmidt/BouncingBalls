@@ -16,6 +16,7 @@ public class MyPanel extends JPanel {
 
     public MyPanel(){
        setBackground(Color.GREEN);
+       setPreferredSize(new Dimension(500,500));
      // ball1 = new Ball(200,200);
        //ball2 = new Ball(300, 200);
         for (int i = 0; i<balls.length;i++){
@@ -36,7 +37,7 @@ public class MyPanel extends JPanel {
 
        for (int i = 0; i<balls.length;i++){
            balls[i].draw(g);
-           balls[i].move();
+           balls[i].move(getWidth()-20,getHeight()-20);
        }
 
       /* ball1.draw(g);

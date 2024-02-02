@@ -14,6 +14,8 @@ public class Ball {
     private int s = (int)(Math.random()*50)+1;
     private int sp = (int)(Math.random()*20)+1;
 
+
+
     public Ball(int x, int y){
         this.x = xx;
         this.y = yy;
@@ -28,13 +30,19 @@ public class Ball {
         g2.fillOval(xx,yy,size,size);
     }
 
-    public void move(){
+    public void move(int w, int l){
         xx += speedx;
         yy += speedy;
-        if(xx>=480||xx<=0){
+//        if(xx>= Main.width||xx<=0){
+//            speedx=speedx*-1;
+//        }
+//        if(yy>=Main.length||yy<=0){
+//            speedy=speedy*-1;
+//        }
+        if(xx>= w||xx<=0){
             speedx=speedx*-1;
         }
-        if(yy>=480||yy<=0){
+        if(yy>=l||yy<=0){
             speedy=speedy*-1;
         }
 
